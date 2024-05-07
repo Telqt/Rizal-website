@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Rizal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./files/logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img id="brush" src="./files/brush.png" alt="">
+                <img id="signature" src="./files/logo.png" alt="">
+            </div>
+            <nav>
+                <a class="nav_links" href="index.html">Home</a>
+                <a class="nav_links" href="#">About</a>
+                <a class="nav_links" href="#">Family Background</a>
+                <a class="nav_links" href="#">Awards</a>
+                <a class="nav_links" href="#">Relationships</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <video id="herovid" autoplay="autoplay" muted loop>
+                <source src="./files/hero2.mp4" type="video/mp4">
+            </video>
+            <!-- <video autoplay="autoplay" muted loop>
+                <source src="./files/filmscratches.mp4" type="video/mp4">
+            </video> -->
+            <div class="overlay"></div>
+            <div class="even_columns">
+                <div class="center_text">
+                    <p>Life and works of</p>
+                    <h1>JOSE RIZAL</h1>
+                </div>
+                <img id="rizal" src="./files/rizal.png" alt="">
+            </div>
+        </div>
+
+        <section>
+
+        </section>
+    </main>
+    
+    <footer>
+        <h1>footer</h1>
+    </footer>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var header = document.getElementById('header');
+        var lastScrollTop = 0;
+        const brush = document.getElementById('brush');
+        const logo = document.getElementById('signature');
+        const links = document.querySelectorAll('.nav_links');
+
+        window.addEventListener('scroll', function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                header.classList.add('scrolled');
+                brush.style.display = 'none';
+                logo.style.height = '50px';
+                links.forEach(link => {
+                    link.style.filter = 'invert(100%)';
+                });
+            } else {
+                header.classList.remove('scrolled');
+                brush.style.display = 'block'; 
+                logo.style.height = '80px'; 
+                links.forEach(link => {
+                    link.style.filter = 'none'; 
+                });
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    });
+
+</script>
+
+
+
+</html>
