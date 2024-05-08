@@ -191,6 +191,34 @@ section {
     overflow: hidden;
 }
 
+.topics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.topic_block {
+    border: 1px solid lightgray;
+    text-align: center;
+}
+
+.topic_block a {
+    display: block;
+    padding: 2rem;
+    text-decoration: none;
+    height: 120px;
+    color: #000;
+    transition: 200ms all linear;
+}
+
+.topic_block a:hover {
+    box-shadow: 0 0 5px #00000042;
+    color: #fff;
+    background: rgb(85, 31, 22);
+}
+
+
 .section_title {
     font-size: 2rem;
 }

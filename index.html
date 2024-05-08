@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>José Rizal</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./files/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./files/logo2.jpg" type="image/x-icon">
 </head>
 <body>
 
@@ -45,6 +45,27 @@
 
         <section>
             <div class="container">
+                <h1>MAIN TOPICS</h1>
+                <div class="topics">
+                    <div class="topic_block">
+                        <a href="chapter1.html">Chapter 1: Republic Act 1425</a>
+                    </div>
+                    <div class="topic_block">
+                        <a href="chapter2.html">Chapter 2: 19th Century Philippines as Rizal's Context</a>
+                    </div>
+                    <div class="topic_block">
+                        <a href="chapter3.html">Chapter 3: Family, Childhood, and Early Education</a>
+                    </div>
+                    <div class="topic_block">
+                        <a href="chapter4.html">Chapter 4: Higher Education and life Abroad</a>
+                    </div>
+                    <div class="topic_block">
+                        <a href="chapter5.html">Chapter 5: Exile, Trial and Death</a>
+                    </div>
+                    <div class="topic_block">
+                        <a href="chapter6.html">Chapter 6: Annotations of Antonio Morga's Sucesos De Las Islas Filipinas</a>
+                    </div>
+                </div>
                 <div class="works">
                     <img src="./files/rizalframe.png" alt="">
                     <div class="rizal_desc">
@@ -78,36 +99,7 @@
     </footer>
 </body>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var header = document.getElementById('header');
-        var lastScrollTop = 0;
-        const brush = document.getElementById('brush');
-        const logo = document.getElementById('signature');
-        const links = document.querySelectorAll('.nav_links');
-
-        window.addEventListener('scroll', function() {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollTop > 0) { // If scroll position is not at the top
-                header.classList.add('scrolled');
-                brush.style.display = 'none';
-                logo.style.height = '50px';
-                links.forEach(link => {
-                    link.style.filter = 'invert(100%)';
-                });
-            } else { // If scroll position is at the top
-                header.classList.remove('scrolled');
-                brush.style.display = 'block'; 
-                logo.style.height = '80px'; 
-                links.forEach(link => {
-                    link.style.filter = 'none'; 
-                });
-            }
-            lastScrollTop = scrollTop; // Update last scroll position
-        });
-    });
-</script>
+<script src="scroll.js"></script>
 
 
 

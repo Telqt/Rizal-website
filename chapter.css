@@ -1,0 +1,89 @@
+.chapter1 {
+    background: url(./files/1425.jpg);
+}
+
+.chapter2 {
+    background: url(./files/19th.jpg);
+}
+
+.chapter3 {
+    background: url(./files/fam.jpg);
+}
+
+.chapter4 {
+    background: url(./files/educ.jpg);
+}
+
+.banner {
+    width: 100vw;
+    height: 500px;
+    display: grid;
+    grid-template-areas: 'stack';
+    place-items: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+
+.banner > * {
+    grid-area: stack;
+    display: block;
+}
+
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.black {
+    width: 100%;
+    height: 100%;
+    background: rgba(85, 31, 22, 0.5);
+}
+
+.chapter_title p {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.chapter_title h1 {
+    color: #fff;
+    background: #000;
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+.main_content {
+    margin: 5rem 0;
+    text-align: justify;
+}
+
+.main_content p:not(.sub) {
+    text-indent: 2rem;
+    padding: 1rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile img {
+    height: 300px;
+}
+
+.title {
+    padding: 2rem;
+}
+
+.works img {
+    width: 100%;
+    object-fit: contain;
+}
