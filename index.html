@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Rizal</title>
+    <title>José Rizal</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./files/logo.png" type="image/x-icon">
 </head>
 <body>
 
     <header id="header">
-        <div class="container">
+        <div class="container flex">
             <div class="logo">
                 <img id="brush" src="./files/brush.png" alt="">
                 <img id="signature" src="./files/logo.png" alt="">
@@ -34,22 +34,47 @@
                 <source src="./files/filmscratches.mp4" type="video/mp4">
             </video> -->
             <div class="overlay"></div>
-            <div class="even_columns">
+            <div class="even_columns place_end">
                 <div class="center_text">
                     <p>Life and works of</p>
-                    <h1>JOSE RIZAL</h1>
+                    <h1>José Rizal</h1>
                 </div>
-                <img id="rizal" src="./files/rizal.png" alt="">
+                <img id="rizal" src="" alt="">
             </div>
         </div>
 
         <section>
-
+            <div class="container">
+                <div class="works">
+                    <img src="./files/rizalframe.png" alt="">
+                    <div class="rizal_desc">
+                        <div class="section_title">Who is Jose Rizal?</div>
+                        <p>José Protacio Rizal Mercado y Alonso Realonda was born on June 19, 1861 in Calamba, Laguna. The seventh of eleven children born to a relatively well-off family in a Dominican-owned tenant land in Calamba, Laguna. Jose Rizal lived and died during the Spanish colonial era in the Philippines</p>
+                        <p>José Rizal, the Philippine national hero, was a prolific writer who produced a significant amount of literary works.</p>
+                    </div>
+                </div>
+                <div class="works">
+                    <div class="work">
+                        <img src="./files/noli.jpg" alt="">
+                        <p><strong>Noli Me Tángere</strong> (Touch Me Not) (1887) - Rizal's most famous novel that exposes the social injustices, corruption, abuse of power by the Spanish friars, and the dire situation of the Philippines under Spanish rule.</p>
+                    </div>
+                    <div class="work">
+                        <img src="./files/elfili.png" alt="">
+                        <p><strong>El Filibusterismo</strong> (The Reign of Greed) (1891) - considered a sequel to Noli, is a darker novel that portrays a revolution brewing as a response to the oppressive conditions.</p>
+                    </div>
+                    <div class="work">
+                        <img src="./files/adios.png" alt="">
+                        <p><strong>Mi último adiós</strong> (My Last Farewell) (1896) - a poem written by Rizal the night before his execution, expressing his love for his country, his family, and his friends.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     
     <footer>
-        <h1>footer</h1>
+        <div class="container">
+            <p>© Rizal Website 2024</p>
+        </div>
     </footer>
 </body>
 
@@ -64,14 +89,14 @@
         window.addEventListener('scroll', function() {
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (scrollTop > lastScrollTop) {
+            if (scrollTop > 0) { // If scroll position is not at the top
                 header.classList.add('scrolled');
                 brush.style.display = 'none';
                 logo.style.height = '50px';
                 links.forEach(link => {
                     link.style.filter = 'invert(100%)';
                 });
-            } else {
+            } else { // If scroll position is at the top
                 header.classList.remove('scrolled');
                 brush.style.display = 'block'; 
                 logo.style.height = '80px'; 
@@ -79,11 +104,11 @@
                     link.style.filter = 'none'; 
                 });
             }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            lastScrollTop = scrollTop; // Update last scroll position
         });
     });
-
 </script>
+
 
 
 
