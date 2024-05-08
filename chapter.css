@@ -14,6 +14,14 @@
     background: url(./files/educ.jpg);
 }
 
+.chapter5 {
+    background: url(./files/chap5.jpg);
+}
+
+.chapter6 {
+    background: url(./files/sucesos.jpg);
+}
+
 .banner {
     width: 100vw;
     height: 500px;
@@ -24,6 +32,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
+}
+
+.chapter6 {
+    background-size: cover;
 }
 
 
@@ -86,4 +98,9 @@
 .works img {
     width: 100%;
     object-fit: contain;
+}
+
+.text_center {
+    margin-left: 50%;
+    transform: translateX(-25%);
 }
